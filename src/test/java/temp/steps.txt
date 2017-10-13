@@ -1,0 +1,16 @@
+Scenario Outline: Login to website
+Given User is on Login Page
+When User Enters “” in userName Textbox
+And User Enters “” in Password Textbox
+And User Select “” in Domain Combobox
+And User Clicks LoginButton
+Then Home Page is displayed
+
+Examples:
+  | UserName     | Password    | Domain  |
+  | abc | def | ghk |
+Scenario: Click on Collabaration zone
+Given User is on Home Page
+When User clicks Collabaration zone
+Then Collabaration Zone Tab should be opened
+

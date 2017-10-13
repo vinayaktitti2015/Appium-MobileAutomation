@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>$build_project_name</td>
+            <td>07 Oct 2017, 14:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.init()</td>
+              <td>5</td>
+              <td class="duration" data-value="133494917482">2m 13s 494ms</td>
+              <td class="duration" data-value="26698983496">26s 698ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.tearDown(Scenario)</td>
+              <td>5</td>
+              <td class="duration" data-value="19582438535">19s 582ms</td>
+              <td class="duration" data-value="3916487707">3s 916ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Predefined_stepDefs.user_hide_keyboard()</td>
+              <td>10</td>
+              <td class="duration" data-value="7980886260">7s 980ms</td>
+              <td class="duration" data-value="798088626">798ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Predefined_stepDefs.user_should_see(String)</td>
+              <td>5</td>
+              <td class="duration" data-value="480092291">480ms</td>
+              <td class="duration" data-value="96018458">096ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Predefined_stepDefs.user_should_wait_for_fewseconds()</td>
+              <td>13</td>
+              <td class="duration" data-value="13005078254">13s 005ms</td>
+              <td class="duration" data-value="1000390634">1s</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.should_click_OK_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="6329019897">6s 329ms</td>
+              <td class="duration" data-value="2109673299">2s 109ms</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.should_display_mobile_validation_message(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1353309162">1s 353ms</td>
+              <td class="duration" data-value="676654581">676ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.should_show_validation(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="299615259">299ms</td>
+              <td class="duration" data-value="99871753">099ms</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.user_click_on_create_a_new_account()</td>
+              <td>5</td>
+              <td class="duration" data-value="968894789">968ms</td>
+              <td class="duration" data-value="193778957">193ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.user_click_on_create_new_account()</td>
+              <td>5</td>
+              <td class="duration" data-value="5164943200">5s 164ms</td>
+              <td class="duration" data-value="1032988640">1s 032ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.user_clicks_on_login_icon()</td>
+              <td>5</td>
+              <td class="duration" data-value="3284255067">3s 284ms</td>
+              <td class="duration" data-value="656851013">656ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.user_enters_mobile_number(String)</td>
+              <td>5</td>
+              <td class="duration" data-value="79018585562">1m 19s 018ms</td>
+              <td class="duration" data-value="15803717112">15s 803ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.user_enters_password(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="26576265533">26s 576ms</td>
+              <td class="duration" data-value="8858755177">8s 858ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">SignUp_stepdefs.user_is_on_application_homepage()</td>
+              <td>5</td>
+              <td class="duration" data-value="9482838976">9s 482ms</td>
+              <td class="duration" data-value="1896567795">1s 896ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>74</td>
+            <td class="duration">5m 7s 021ms</td>
+            <td class="duration">4s 148ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

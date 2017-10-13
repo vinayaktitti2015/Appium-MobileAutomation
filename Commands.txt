@@ -1,0 +1,51 @@
+ADB Commands:
+
+1. To find 
+   adb devices
+
+2. To find packagename & activity for installed apps in mobile
+   mtd-1: adb shell pm list packages -f
+   mtd:2- adb shell
+          dumpsys window windows|grep -E 'mCurrentFocus|mFocusedApp'
+ 
+3. install appium doctor
+    npm install -g appium-doctor
+
+    Run:
+    appium-doctor --android
+    
+4. npm install appium --chromedriver_version="2.16"
+
+5. android list avd // To list all avd
+6. emulator -avd (emulatorname) // to start emualtor
+
+7. Wifi Connection: > cd platformtools
+          run: adb -s HT67EZ803092 tcpip 5555
+          run: adb connect 192.168.0.121
+
+8. stress test
+   cd > platformtools
+   cmd> adb shell monkey -p <app package name> -v <actions-ex:30>
+
+9.  To stary activity from command line
+    adb shell am start -n packagename/activityname
+
+
+10. The following is a partial list of some commonly used KeyCodes:
+    'a' - 'z' --> 29 - 54
+    '0' - '9'--> 7 - 16
+    SPACE --> 62
+    ENTER ---> 66
+    BACKSPACE --> 67
+    BACK --> 4
+    CALL --> 5
+    ENDCALL --> 6
+
+    Source: http://developer.android.com/reference/android/view/KeyEvent.html
+
+
+11.
+  
+    
+ 
+ 
