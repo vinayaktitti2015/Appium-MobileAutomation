@@ -20,7 +20,7 @@
 
 1. Go To testng.xml file in root path- add deviceID based on platform
    Ex: Android > UDID - emulator-5554
-   iOS > UDID - 5DB3749B-02A4-468E-B4EB-09B1FADC51FE
+   iOS > UDID - SDSD2332-34343-3434-B4EB-3434343SCDS
 
 ## Run test scripts with tags
 ex: smoke, regression, register, login
@@ -38,7 +38,7 @@ gradle clean --info test -Dcucumber.options="--tags @register,@login"
    Report will be generated at projectroot/target/cucumber-html-reports/overview-features.html
 
 ## Run nodejs server manually for parallel execution
-1. cd /usr/local/lib/node_modules/appium/build/lib
+1. change directory to: /usr/local/lib/node_modules/appium/build/lib
 2. To run Android: node main.js -a 127.0.0.1 -p 4723 -cp 4723 -bp 4567
 3. To run iOS: node main.js -a 127.0.0.1 -p 1234 -cp 1234 -bp 2345
 
