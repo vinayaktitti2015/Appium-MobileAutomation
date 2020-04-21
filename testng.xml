@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" verbose="2" parallel="tests" thread-count="2">
+    <test name="Android-Test" preserve-order="true" enabled="true">
+        <parameter name="deviceName_" value="Android"/>
+        <parameter name="UDID_" value="emulator-5554"/>
+        <parameter name="platformVersion_" value="7.1.1"/>
+        <parameter name="URL_" value="127.0.0.1:4723/wd/hub"/>
+
+        <classes>
+            <class name="testExecution.CucumberRunner"/>
+        </classes>
+    </test>
+    <test name="iOS-Test" preserve-order="true" enabled="false">
+        <parameter name="deviceName_" value="iphone X"/>
+        <parameter name="UDID_" value="343sdsds-ssss-4CB2-A21D-sfsdsdsd"/>
+        <parameter name="platformVersion_" value="11.2"/>
+        <parameter name="URL_" value="127.0.0.1:1234/wd/hub"/>
+        <classes>
+            <class name="testExecution.CucumberRunner"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
