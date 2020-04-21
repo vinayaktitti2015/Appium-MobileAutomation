@@ -1,4 +1,4 @@
-# ReactNative-e2e-automation
+# Appium-e2e-automation
 
 ## Prerequisites
 
